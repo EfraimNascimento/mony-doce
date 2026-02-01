@@ -7,57 +7,143 @@
 }
 
 #menu{
-    padding: 20px;
+    padding: 10px;
     display: flex;
+    justify-content: space-between;
+}
+
+nav span{
+    width: 200px;
+}
+
+nav span img{
+    max-width: 100%;
 }
 
 nav > ul{
     display: flex;
 }
 
-ul{
+nav > ul{
     list-style: none;
+    align-items: center;
+    width: fit-content;
 }
 
 li{
+    margin: 10px;
     text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
 }
 
 a{
     color: black;
     text-decoration: none;
+    padding: 10px;
 }
 
 a:hover{
-    background-color: black;
+    background-color: purple;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.200);
+    border-radius: 30px;
     color: white;
 }
 
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-image: url(../imagens/bg-section.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+    max-width: 100%;
+}
+
 section{
-    width: 100%;
-    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    margin-top: 100px;
 }
 
 div.container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: black;
+    grid-template-columns: auto 48% 48% auto;
+    grid-template-rows: auto auto auto ;
+    justify-items: center;
+    align-items: center;
+    color: rgb(107, 81, 81);
+    font-weight: bold;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.200);
+    margin-top: 25px;
+    padding: 15px;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: purple;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.200);
+    padding: 10px;
+    width: 300px;
     color: white;
 }
 
+h3{
+    font-family: cursive;
+}
+
+h3::before{
+    color: purple;
+    content: "\2665";
+    font-size: 2em;
+}
+
 .sabores{
-    grid-column-start: 1;
+    grid-column-start: 2;
+    grid-row-start: span 2;
+}
+
+.tamanho{
+    grid-column-start: 3;
+    grid-row-start: 1;
 }
 
 .massas{
-    grid-column-start: 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
 }
 
 .recheios{
-    grid-column-start: 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
 
 .cobertura{
-    grid-column-start: 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+}
+
+footer span{
+    width: fit-content;
+}
+
+footer span img{
+    width: 40%;
 }

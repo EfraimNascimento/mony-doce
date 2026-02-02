@@ -50,6 +50,13 @@ links.forEach(link => {
 });
 
 function darkMode(){
-    let sol = document.querySelector('body');
-    sol.classList.toggle('escuro');
+    let icon = document.querySelector('body');
+    icon.classList.toggle('escuro');
+}
+
+function carrossel(){
+    const images = document.querySelectorAll('#carrossel img')
+
+    
+
 }

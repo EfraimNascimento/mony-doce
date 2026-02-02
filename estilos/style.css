@@ -34,13 +34,14 @@ nav#menu{
     top: 0;
     display: flex;
     flex-flow: column nowrap;
-    height: fit-content;
     width: 95%;
+    margin-top: 20px;
     padding: 30px;
     text-align: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    border-radius: 0px 0px 30px 30px;
+    border-radius: 30px;
+    height: 95px;
 }
 
 nav span{
@@ -52,6 +53,7 @@ nav span img{
 }
 
 nav > ul{
+    transform: translateY(-185%);
     list-style: none;
 }
 

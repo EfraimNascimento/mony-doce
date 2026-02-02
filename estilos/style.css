@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+:root{
+    --cor-principal: #990082;
+    --cor-secundaria: #CC00AD;
+    --cor-terciaria: #FF00D9;
+    --texto: #FFE5FB;
+}
+
+body.escuro{
+    --cor-principal: #24001E;
+    --cor-secundaria: #33002B;
+    --cor-terciaria: #660057;
+    --texto: #FF99F0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,22 +25,26 @@ header{
     top: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #hamburguer{
+    position: absolute;
     display: flex;
     flex-flow: column nowrap;
-    width: 30px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
     align-self: flex-start;
     cursor: pointer;
 }
 
 #hamburguer span{
-    width: 100%;
+    text-align: center;
+    width: 90%;
     height: 3px;
-    background-color: black;
-    margin-top: 7px;
+    background-color: var(--texto);
+    margin-top: 3px;
 }
 
 nav#menu{
@@ -34,18 +52,37 @@ nav#menu{
     top: 0;
     display: flex;
     flex-flow: column nowrap;
-    width: 95%;
+    width: 90%;
     margin-top: 20px;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    height: 95px;
+    background-color: var(--cor-principal);
+    border-radius: 20px;
+    height: 50px;
 }
 
 nav span{
     width: 200px;
+    transition: transform .3s;
+    border-radius: 30px;
+}
+
+#icone{
+    position: absolute;
+    right: 10px;
+}
+
+#icone i{
+    position: relative;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: var(--texto);
+    align-self: flex-end;
+}
+
+#icone i:hover{
+    color: var(--cor-secundaria);
 }
 
 nav span img{
@@ -53,8 +90,9 @@ nav span img{
 }
 
 nav > ul{
-    transform: translateY(-185%);
+    display: none;
     list-style: none;
+    margin-top: 10px;
 }
 
 li{
@@ -65,17 +103,15 @@ li{
 }
 
 a{
-    color: black;
+    color: var(--texto);
     text-decoration: none;
     padding: 10px;
     width: 100%;
 }
 
 a:hover{
-    background-color: purple;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.200);
+    background-color: var(--cor-secundaria);
     border-radius: 30px;
-    color: white;
 }
 
 main{
@@ -93,7 +129,7 @@ section{
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 div.container{
@@ -102,10 +138,11 @@ div.container{
     grid-template-rows: auto auto auto ;
     justify-items: start;
     align-items: start;
-    color: rgb(107, 81, 81);
+    color: var(--cor-terciaria);
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.959);
+    background-color: white;
     border-radius: 30px;
+    outline: 2px solid var(--cor-secundaria);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.200);
     margin: 100px 0px;
     padding: 15px;
@@ -117,12 +154,12 @@ h2{
     text-align: center;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: purple;
+    background-color: var(--cor-principal);
     border-radius: 30px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.200);
     padding: 10px;
     width: 300px;
-    color: white;
+    color: var(--texto);
 }
 
 h3{
@@ -130,7 +167,7 @@ h3{
 }
 
 h3::before{
-    color: purple;
+    color: var(--cor-secundaria);
     content: "\2665";
     font-size: 2em;
 }

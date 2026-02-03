@@ -94,6 +94,10 @@ window.addEventListener('scroll', ()=>{
         nav.classList.remove('ativo')
     }
     
-
-
 })
+
+const track = document.getElementById('scrollTrack');
+const items = track.innerHTML;
+
+track.innerHTML += items;
+

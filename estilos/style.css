@@ -174,8 +174,8 @@ section{
 
 div#carrossel{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
     height: 85%;
     gap: 5px;
@@ -190,10 +190,11 @@ div.image{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     background-color: var(--bg-alternativo);
     border: 4px solid var(--bg-card);
+    box-shadow: 0px 0px 20px var(--sombra);
     outline: 4px solid var(--cor-acentuacao);
     border-radius: 30px;
 }

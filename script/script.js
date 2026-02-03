@@ -86,14 +86,22 @@ window.addEventListener('scroll', ()=>{
     const toTop = document.getElementById('toTop');
     const nav = document.querySelector('#menu');
 
-    if(scrollY != 0 && scrollY >= 366){
-        toTop.style.display = 'block';
+    if(scrollY != 0 && scrollY >= 210){
+        toTop.style.transform = 'translateY(0%)';
         nav.classList.add('ativo')
     }else{
-        toTop.style.display = 'none';
+        toTop.style.transform = 'translateY(200%)';
         nav.classList.remove('ativo')
-    }
-    
+    }    
+})
+
+let goToTop = document.getElementById('toTop');
+goToTop.addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 })
 
 const track = document.getElementById('scrollTrack');

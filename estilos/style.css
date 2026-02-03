@@ -96,12 +96,11 @@ nav#menu{
     align-items: center;
     background-color: var(--cor-primaria);
     border-radius: 20px;
-    transition: margin .5s, width .5s, border-radius .5s;
+    transition: margin .2s, width .2s, border-radius .2s;
 }
 
 nav#menu.ativo{
     margin: 0;
-    height: 60px;
     width: 100%;
     border-radius: 0px 0px 20px 20px;
 }
@@ -143,8 +142,7 @@ nav > ul{
 li{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 a{
@@ -212,6 +210,7 @@ div#scrollTrack .image{
     border: 4px solid var(--bg-card);
     box-shadow: 0px 0px 20px var(--sombra);
     border-radius: 30px;
+    overflow: hidden;
     flex-shrink: 0;
 }
 
@@ -235,6 +234,7 @@ div.container{
     display: grid;
     grid-template-columns: auto 48% 48% auto;
     grid-template-rows: auto auto auto ;
+    justify-items: center;
     color: var(--texto-secundario);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -245,12 +245,20 @@ div.container{
     border-radius: 30px;
     box-shadow: 0px 0px 20px var(--sombra);
     width: 95%;
+    margin-bottom: 100px;
     gap: 10px;
     padding: 10px;
 }
 
 div.container ul{
-    list-style: "\2665";
+    list-style: none;
+}
+
+div.container li{
+    font-size: .8em;
+    text-align: center;
+    padding: 5px;
+    border: 3px dashed var(--bg-alternativo);
 }
 
 h2{
@@ -260,18 +268,20 @@ h2{
     font-weight: 400;
     font-style: normal;
     background-color: var(--cor-secundaria);
+    color: var(--texto-principal);
     border-radius: 30px;
     box-shadow: 0px 0px 20px var(--sombra);
     padding: 10px;
     width: 300px;
-    color: var(--texto-principal);
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
 h3{
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 h3::before{
@@ -308,7 +318,7 @@ h3::before{
 #toTop{
     position: fixed;
     right: 25px;
-    bottom: 100px;
+    bottom: 30px;
     border-radius: 30px;
     width: 50px;
     height: 50px;
@@ -316,10 +326,22 @@ h3::before{
     border: 3px solid var(--bg-principal);
     background-color: var(--bg-alternativo);
     z-index: 2;
-    display: none;
+    transform: translateY(200%);
+    transition: transform .5s;
 }
 
-#toTop span{
+#toTop:hover{
+    background-color: var(--bg-principal);
+}
+
+#toTop a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: none;
+}
+
+#toTop i{
     position: relative;
     display: flex;
     justify-content: center;
@@ -327,32 +349,22 @@ h3::before{
     height: 100%;
     width: 100%;
     padding: 5px;
-}
-
-#toTop span i{
     font-size: 1.5em;
     cursor: pointer;
     color: var(--texto-botoes);
-    
-}
 
-#toTop span i:hover{
-    color: var(--hover-primario);
-    box-shadow: 0px 0px 20px solid var(--sombra);
 }
 
 footer{
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 250px;
+    height: 200px;
     background-color: var(--bg-alternativo);
     border-top: 3px solid var(--borda);
 }
 
 footer span{
-    max-width: 100%;
+    max-width: 50%;
 }
 
 footer span img{

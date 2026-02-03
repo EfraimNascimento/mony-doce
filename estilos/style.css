@@ -88,6 +88,7 @@ nav#menu{
     top: 0;
     display: flex;
     flex-flow: column nowrap;
+    height: 50px;
     width: 90%;
     margin-top: 20px;
     padding: 15px;
@@ -95,13 +96,20 @@ nav#menu{
     align-items: center;
     background-color: var(--cor-primaria);
     border-radius: 20px;
-    height: 50px;
+    transition: margin .5s, width .5s, border-radius .5s;
+}
+
+nav#menu.ativo{
+    margin: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
 }
 
 nav span{
     width: 200px;
-    transition: transform .3s;
     border-radius: 30px;
+    transition: transform .3s;
 }
 
 #icone{
@@ -169,7 +177,6 @@ section{
     align-items: center;
     width: 100%;
     margin-top: 100px;
-    height: 100vh;
 }
 
 div#carrossel{
@@ -177,11 +184,12 @@ div#carrossel{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: 85%;
     gap: 5px;
     width: 90%;
     border-radius: 30px;
     background-color: var(--bg-card);
+    outline: 3px solid var(--borda);
+    border: 3px solid var(--bg-principal);
     box-shadow: 0px 0px 20px var(--sombra);
     overflow: hidden;
 }
@@ -192,10 +200,10 @@ div.image{
     align-items: center;
     height: 100px;
     width: 100px;
+    outline: 4px solid var(--cor-acentuacao);
     background-color: var(--bg-alternativo);
     border: 4px solid var(--bg-card);
     box-shadow: 0px 0px 20px var(--sombra);
-    outline: 4px solid var(--cor-acentuacao);
     border-radius: 30px;
 }
 
@@ -210,23 +218,22 @@ div.container{
     display: grid;
     grid-template-columns: auto 48% 48% auto;
     grid-template-rows: auto auto auto ;
-    justify-items: center;
-    align-items: start;
     color: var(--texto-secundario);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    border-radius: 30px;
-    outline: 2px solid var(--borda);
-    box-shadow: 0px 0px 20px var(--sombra);
-    margin: 15px 0px;
-    padding: 15px;
-    width: 90%;
-    gap: 10px;
+    outline: 3px solid var(--borda);
     background-color: var(--bg-card);
-    /* background-image: url(../imagens/bg-container.png); */
-    filter: brightness(90%);
-    background-size: cover;
+    border: 3px solid var(--bg-principal);
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px var(--sombra);
+    width: 95%;
+    gap: 10px;
+    padding: 10px;
+}
+
+div.container ul{
+    list-style: "\2665";
 }
 
 h2{
@@ -241,6 +248,7 @@ h2{
     padding: 10px;
     width: 300px;
     color: var(--texto-principal);
+    margin-bottom: 90px;
 }
 
 h3{
@@ -252,7 +260,7 @@ h3{
 h3::before{
     color: var(--cor-primaria);
     content: "\2665";
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .sabores{
@@ -278,6 +286,42 @@ h3::before{
 .cobertura{
     grid-column-start: 3;
     grid-row-start: 1;
+}
+
+#toTop{
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    outline: 3px solid var(--borda);
+    border: 3px solid var(--bg-principal);
+    background-color: var(--bg-alternativo);
+    z-index: 2;
+    display: none;
+}
+
+#toTop span{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+#toTop span i{
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--texto-botoes);
+    
+}
+
+#toTop span i:hover{
+    color: var(--hover-primario);
+    box-shadow: 0px 0px 20px solid var(--sombra);
 }
 
 footer{

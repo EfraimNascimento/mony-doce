@@ -1,3 +1,35 @@
+function darkMode(icon){
+    const bodyTheme = document.querySelector('body');
+    let theme = 'claro'
+
+    if(localStorage['tema'] == 'escuro'){
+        bodyTheme.classList.remove('escuro');
+        icon.classList.add('fa-moon');
+        icon.classList.remove('fa-sun');
+        theme = 'claro'
+    }else{
+        bodyTheme.classList.add('escuro');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        theme = 'escuro'
+    }
+    localStorage.setItem('tema', theme);
+}
+
+function checkTheme(){
+    const bodyTheme = document.querySelector('body');
+    let icon = document.querySelector('#icone i')
+    if(localStorage['tema'] == 'claro'){
+        bodyTheme.classList.remove('escuro');
+        icon.classList.add('fa-moon');
+        icon.classList.remove('fa-sun');
+    }else{
+        bodyTheme.classList.add('escuro');
+        icon.classList.add('fa-sun');
+        icon.classList.remove('fa-moon');
+    }
+}
+
 function hamburguer(){
     const listmenu = document.querySelector('#menu ul');
     const menu = document.querySelector('#menu');
@@ -39,7 +71,7 @@ links.forEach(link => {
 
         if(target){
             const headerHeight = document.querySelector('header').offsetHeight;
-            const targetPosition = target.offsetTop - headerHeight - 150;
+            const targetPosition = target.offsetTop - headerHeight - 140;
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -49,14 +81,19 @@ links.forEach(link => {
 
 });
 
-function darkMode(){
-    let icon = document.querySelector('body');
-    icon.classList.toggle('escuro');
-}
+window.addEventListener('scroll', ()=>{
 
-function carrossel(){
-    const images = document.querySelectorAll('#carrossel img')
+    const toTop = document.getElementById('toTop');
+    const nav = document.querySelector('#menu');
 
+    if(scrollY != 0 && scrollY >= 366){
+        toTop.style.display = 'block';
+        nav.classList.add('ativo')
+    }else{
+        toTop.style.display = 'none';
+        nav.classList.remove('ativo')
+    }
     
 
-}
+
+})

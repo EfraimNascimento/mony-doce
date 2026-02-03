@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body onload="carrossel()">
+<body onload="checkTheme()">
     <header>
         <nav id="menu">
             <div id="hamburguer" onclick="hamburguer()">
@@ -25,14 +25,13 @@
                 <span></span>
                 <span></span>
             </div>
-            <!-- <span><img src="imagens/logo.png" alt="logo"></span> -->
             <ul>
                 <li class="item"><a href="#Bpote">Bolos no Pote</a></li>
                 <li class="item"><a href="#Bfestivos">Bolos Festivos</a></li>
                 <li class="item"><a href="#Bcaseiros">Bolos Caseiros</a></li>
             </ul>
             <div id="icone">
-                <i class="fa-regular fa-sun" onclick="darkMode()"></i>
+                <i class="fa-solid fa-moon" onclick="darkMode(this)"></i>
             </div>
         </nav>
     </header>
@@ -185,6 +184,9 @@
                 </div>
             </div>
         </section>
+        <div id="toTop">
+            <span><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
     </main>
     <footer>
         <span>

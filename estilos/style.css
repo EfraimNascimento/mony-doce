@@ -115,7 +115,7 @@ nav span{
     right: 10px;
 }
 
-#icone i{
+#icone > i{
     position: relative;
     font-size: 1.2em;
     cursor: pointer;
@@ -123,7 +123,7 @@ nav span{
     align-self: flex-end;
 }
 
-#icone i:hover{
+#icone > i:hover{
     color: var(--hover-primario);
     box-shadow: 0px 0px 20px solid var(--sombra);
 }
@@ -133,18 +133,18 @@ nav span img{
 }
 
 nav > ul{
-    display: none;
     list-style: none;
     margin-top: 40px;
+    display: none;
 }
 
-li{
+nav > ul > li{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 20px;
 }
 
-a{
+nav > ul > li > a{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -153,7 +153,7 @@ a{
     padding: 10px;
 }
 
-a:hover{
+nav > ul > li > a:hover{
     background-color: var(--hover-primario);
     border-radius: 10px;
 }
@@ -274,6 +274,9 @@ div.container li{
     text-align: center;
     padding: 5px;
     border: 3px dashed var(--bg-alternativo);
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
 }
 
 h2{
@@ -346,11 +349,12 @@ h3::before{
 }
 
 #toTop:hover{
-    background-color: var(--bg-principal);
+    background-color: var(--hover-secundario);
 }
 
 #toTop a{
     display: block;
+    text-decoration: none;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -372,21 +376,52 @@ h3::before{
 }
 
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 230px;
-    background-color: var(--bg-alternativo);
     border-top: 3px solid var(--borda);
 }
 
-footer span{
+#footer-container{
     display: flex;
-    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
+    height: 230px;
+    background-color: var(--bg-alternativo);
 }
 
-footer span img{
-    max-width: 40%;
+#footer-container #img-container img{
+    width: 150px;
+}
+
+footer #socialMedias-container ul{
+    list-style: none;
+}
+
+footer #socialMedias-container ul li{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px var(--sombra);
+    background-color: var(--bg-principal);
+}
+
+footer #socialMedias-container ul li:hover{
+    background-color: var(--hover-primario);
+}
+
+footer #socialMedias-container ul li i{
+    color: var(--texto-secundario);
+    font-size: 1.5em;
+}
+
+footer #socialMedias-container ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--texto-secundario);
 }

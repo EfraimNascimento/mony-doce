@@ -43,20 +43,18 @@ function hamburguer(){
         listmenu.style.display = 'none';
         menu.style.height = '50px';
     }      
-    
 };
 
 function hamburguerIconChange(){
     const spans = document.querySelectorAll('#hamburguer span');
-    if(spans[0].style.display == 'block'){
-        spans[0].style.display = 'none';
-        spans[1].style.transform = 'translate(0px, 3px) rotate(-50deg)';
-        spans[2].style.transform = 'translate(0px, -3px) rotate(50deg)';
-    
-    }else{
+    if(spans[0].style.display == 'none'){
         spans[0].style.display = 'block';
         spans[1].style.transform = 'rotate(0deg)';
         spans[2].style.transform = 'rotate(0deg)';
+    }else{
+        spans[0].style.display = 'none';
+        spans[1].style.transform = 'translate(0px, 3px) rotate(-50deg)';
+        spans[2].style.transform = 'translate(0px, -3px) rotate(50deg)';
     }
 }
 

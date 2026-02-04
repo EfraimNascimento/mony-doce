@@ -107,3 +107,15 @@ const items = track.innerHTML;
 
 track.innerHTML += items;
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+   const triggers = document.querySelectorAll('.image')
+   const tooltip = document.createElement('div');
+
+    triggers.forEach(cardImage =>{
+        cardImage.addEventListener('mouseenter', ()=>{
+            
+        })
+    })
+});

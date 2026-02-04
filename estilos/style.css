@@ -220,6 +220,11 @@ div#scrollTrack .image{
     animation: shakeOnHover 3s;
 }
 
+#scrollTrack .image img:hover{
+    filter: blur(2px);
+    transition: filter .9s;
+}
+
 #scroll-container #scrollTrack:hover{
     animation-play-state: paused;
 }
@@ -243,6 +248,15 @@ div.image > img{
     width: 100%;
     height: auto;
     margin: 20px;
+}
+
+div.image > div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    
 }
 
 div.container{

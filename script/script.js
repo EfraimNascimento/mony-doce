@@ -114,8 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
    const tooltip = document.createElement('div');
 
     triggers.forEach(cardImage =>{
+        
         cardImage.addEventListener('mouseenter', ()=>{
+            // cardImage.innerHTML += '<p>'+ cardImage.lastElementChild.alt +'</p>'
+            cardImage.toggleAttribute()
+
             
-        })
-    })
+        });
+
+        
+
+    });
 });

@@ -1,0 +1,13 @@
+@keyframes shakeOnHover{
+    0% {transform: rotate(0deg);}
+    5%{transform: rotate(30deg); transform: scale(110%);}
+    10%{transform: rotate(-30deg);}
+    15%{transform: rotate(30deg);}
+    20%{transform: rotate(-30deg);}
+    30%{transform: rotate(0deg);}
+}
+
+@keyframes rolagemHorizontal{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}

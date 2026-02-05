@@ -36,14 +36,24 @@ function hamburguer(){
 
     if(listmenu.style.display == 'none'){
         hamburguerIconChange()
-        listmenu.style.display = 'block';
+        if(window.innerWidth > 768){
+            listmenu.style.display = 'block';
+        }
         menu.style.height = 'fit-content';
     }else{
         hamburguerIconChange()
-        listmenu.style.display = 'none';
+        if(window.innerWidth < 768){
+            listmenu.style.display = 'none';
+        }
         menu.style.height = '50px';
     }      
 };
+
+if(window.innerWidth >= 768){
+    document.querySelector('#menu ul').style.display = 'flex';
+}else{
+    document.querySelector('#menu ul').style.display = 'none';
+}
 
 function hamburguerIconChange(){
     const spans = document.querySelectorAll('#hamburguer span');
@@ -117,9 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         cardImage.addEventListener('mouseenter', ()=>{
             // cardImage.innerHTML += '<p>'+ cardImage.lastElementChild.alt +'</p>'
-            cardImage.toggleAttribute()
-
-            
         });
 
         

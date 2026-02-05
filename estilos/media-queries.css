@@ -1,0 +1,64 @@
+@media screen and (min-width: 768px) {
+    
+    #hamburguer{
+        display: none;
+    }
+
+    nav#menu{
+        display: flex;
+        height: 50px;
+    }
+
+    nav > ul{
+        margin: 0;
+        width: fit-content;
+    }
+
+    nav > ul > li{
+        margin: 0px 25px;
+        width: fit-content;
+    }
+
+    nav > ul > li > a{
+        padding: 10px;
+    }
+
+    div.container{
+        width: 80%;
+    }
+
+    section#Principal{
+        margin-top: 100px;
+    }
+
+    div#scroll-container{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    div.container{
+        width: 60%;
+    }
+
+    div#scroll-container{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    main{
+        
+    }
+
+    div.container{
+        width: 45%;
+    }
+
+    div#scroll-container{
+        width: 45%;
+    }
+
+
+}

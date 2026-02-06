@@ -33,30 +33,30 @@ function checkTheme(){
 function hamburguer(){
     const listmenu = document.querySelector('#menu ul');
     const menu = document.querySelector('#menu');
-
-    if(listmenu.style.display == 'none'){
-        hamburguerIconChange()
-        if(window.innerWidth > 768){
+    if(window.innerWidth < 768){
+        if(listmenu.style.display == 'none'){
+            hamburguerIconChange()
             listmenu.style.display = 'block';
-        }
-        menu.style.height = 'fit-content';
-    }else{
-        hamburguerIconChange()
-        if(window.innerWidth < 768){
+            menu.style.height = 'fit-content';
+        }else{
+            hamburguerIconChange()
             listmenu.style.display = 'none';
-        }
-        menu.style.height = '50px';
-    }      
+            menu.style.height = '50px';
+        }      
+    }
 };
 
-if(window.innerWidth >= 768){
+if(window.innerWidth > 767){
     document.querySelector('#menu ul').style.display = 'flex';
+    document.querySelector('#hamburguer').style.display='none';
 }else{
     document.querySelector('#menu ul').style.display = 'none';
+    document.querySelector('#menu #hamburguer').style.display='flex';
 }
 
 function hamburguerIconChange(){
     const spans = document.querySelectorAll('#hamburguer span');
+    
     if(spans[0].style.display == 'none'){
         spans[0].style.display = 'block';
         spans[1].style.transform = 'rotate(0deg)';
